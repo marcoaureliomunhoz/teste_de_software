@@ -37,7 +37,8 @@ Podemos testar o nosso software de diversas formas: por meio de testes de aceita
 **Frameworks para testes unitários (caixa branca)**  
 - **jUnit**: pode ser incorporado ao eclipse e serve para testes em rotinas java.
 - **nUnit e csUnit**: utilizados para testes de aplicações baseadas no dotnet framework.
-- **dUnit**: utilizado em testes de aplicações win32 desenvolvidas no ambietne delphi.
+- **dUnit**: utilizado em testes de aplicações win32 desenvolvidas no ambiente Delphi.
+- **PHPUnit**: utilizado para testes de aplicações em PHP.
 
 Em um teste unitário, tipicamente, testamos os métodos de forma isolada, evitando acesso à outros recursos como sistema de arquivos, banco de dados, rede etc. Para testar métodos que fazem uso desses recursos em suas implementações, devemos fazer uso de stubs e/ou mocks.
 
@@ -68,7 +69,7 @@ Ultimamente, e principalmente na comunidade de software livre, é comum utilizar
 **Mock Objects**  
 Objetos Mock podem simular partes do comportamento do código de domínio, e são capazes de verificar se eles são usados como definido. Classes de domínio podem ser testados de forma isolada, simulando seus colaboradores com Mock Objects. Escrever e manter Mock Objects é frequentemente uma tarefa tediosa, que podem introduzir erros. EasyMock é uma biblioteca que gera dinamicamente Mock Objects – sem necessidade de escrevê-los, e nenhum código gerado.
 
-C#
+```csharp
 [TestClass]
 public class EmailTests 
 {
@@ -86,6 +87,7 @@ public class EmailTests
 		Assert.AreEqual("marco@gmail.com", email.Endereco);
 	}
 }
+```
 
 --- 
 
